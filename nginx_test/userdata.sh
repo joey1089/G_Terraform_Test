@@ -3,4 +3,4 @@ apt update -y &&
 apt install -y nginx
 systemctl start nginx
 systemctl enable nginx
-echo "Hi How are you doing, hope you are good" > /var/www/html/index.html
+echo "<h3>Hi How are you doing, hope you are good<h3>" > /var/www/html/index.html
