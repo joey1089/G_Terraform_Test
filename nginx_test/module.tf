@@ -1,20 +1,5 @@
-# Variables
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
-variable "key_name" {}
-variable "private_key_path" {}
-variable "region" {
-  default = "us-east-1"
-}
-
-# Provider
-provider "aws" {
-  region     = var.region
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
-}
-
-# DATA
+# These code are working fine after test - it deployes single ec2 instances with nginx hosted page
+# this data block gets info for resources from terrafoorm
 data "aws_ami" "aws_ubuntu" {
   most_recent = true
   owners      = ["amazon"]
