@@ -1,4 +1,4 @@
-
+# These code are working fine after test - it deployes single ec2 instances with nginx hosted page
 # this data block gets info for resources from terrafoorm
 data "aws_ami" "aws_ubuntu" {
   most_recent = true
