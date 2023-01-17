@@ -1,5 +1,5 @@
-# Variables 
-# ---- key values are stored in *.tfvars file ----- so it will not in GitHub
+# Variables only
+# ---- key values are stored in *.tfvars file 
 variable "aws_access_key" {}
 variable "aws_secret_key" {}
 variable "key_name" {}
