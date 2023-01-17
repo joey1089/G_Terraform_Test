@@ -1,26 +1,23 @@
 # These code are working fine after test - it deployes single ec2 instances with nginx hosted page
-# this data block gets info for resources from terrafoorm
+# This data block gets info for resources from terraform
 data "aws_ami" "aws_ubuntu" {
   most_recent = true
   owners      = ["amazon"]
-
   filter {
     name   = "name"
     values = ["amzn-ami-hvm*"]
   }
-
   filter {
     name   = "root-device-type"
     values = ["ebs"]
   }
-
   filter {
     name   = "virtualization-type"
     values = ["hvm"]
   }
 }
 
-# -------Create Resources with ami-id for us-east-1
+# ------- Create Resources with ami-id for us-east-1
 resource "aws_instance" "aws_ubuntu" {
   instance_type   = "t2.micro"
   ami             = "ami-06878d265978313ca"
